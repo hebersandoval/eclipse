@@ -2,14 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{{ title | default("Site") }}</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-        {% include "nav.njk" %}
-        <main>
-            {{ content | safe }}
+        <header class="site-header">
+            <div class="container">
+                <div class="site-brand"><a href="/">{{ title | default("My Site") }}</a></div>
+                {% include "nav.njk" %}
+            </div>
+        </header>
+
+        <main id="content" class="site-main">
+            <div class="container">
+                {{ content | safe }}
+            </div>
         </main>
-        {% include "footer.njk" %}
+
+        <footer class="site-footer">
+            <div class="container">
+                {% include "footer.njk" %}
+            </div>
+        </footer>
     </body>
 </html>

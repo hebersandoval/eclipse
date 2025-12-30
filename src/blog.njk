@@ -3,12 +3,18 @@ layout: base.njk
 title: Blog
 permalink: /blog/index.html
 ---
-<h1>Blog Posts</h1>
-<ul>
-    {% for post in collections.posts | reverse %}
-        <li>
-            <a href="{{ post.url }}">{{ post.data.title }}</a>
-            <p>{{ post.date | date('%Y-%m-%d') }}</p>
-        </li>
-    {% endfor %}
-</ul>
+<header class="page-header">
+    <h1>Blog Posts</h1>
+    <p class="lead">Latest posts and updates.</p>
+</header>
+
+<section class="posts-list">
+    <ul>
+        {% for post in collections.posts | reverse %}
+            <li class="post-item">
+                <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+                <div class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%Y-%m-%d") }}</time></div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
