@@ -1,5 +1,22 @@
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/css');
+
+    // Post collection
+    eleventyConfig.addCollection('posts', function (collectionApi) {
+        return collectionApi.getFilteredByGlob('src/posts/*.md');
+    });
+
+    // Custom filters
+    eleventyConfig.addFilter('date', function (value, format) {
+        const date = new Date(value);
+
+        if (format === '%Y-%m-%d') {
+            return date.toISOString().split('T')[0];
+        }
+
+        return value;
+    });
+
     return {
         dir: {
             input: 'src',
