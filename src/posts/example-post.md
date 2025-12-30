@@ -1,7 +1,7 @@
 ---
 title: Example Post
 date: 2025-12-28
-
+layout: post.njk
 permalink: /blog/{{ title | slugify }}/
 ---
 
