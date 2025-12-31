@@ -5,6 +5,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/fonts');
     eleventyConfig.addPassthroughCopy('src/styles');
 
+    // Helps CD to read base path
+    eleventyConfig.addPlugin(HtmlBasePlugin);
+
     // Post collection
     eleventyConfig.addCollection('posts', function (collectionApi) {
         return collectionApi.getFilteredByGlob('src/posts/*.md');
