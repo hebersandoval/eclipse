@@ -1,4 +1,6 @@
-module.exports = function (eleventyConfig) {
+import { HtmlBasePlugin } from '@11ty/eleventy';
+
+export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy('src/css');
     eleventyConfig.addPassthroughCopy('src/images');
