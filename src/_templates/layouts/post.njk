@@ -2,12 +2,14 @@
 layout: layouts/base.njk
 ---
 <article class="post-article">
-	<header>
-		<h1 class="post-title">{{ title }}</h1>
-		<p class="post-meta"><time datetime="{{ date | date("%Y-%m-%d") }}">{{ date | date("%Y-%m-%d") }}</time></p>
-	</header>
+    <header>
+        <h1 class="post-title">{{ title }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ date | date("%Y-%m-%d") }}">{{ date | date("%Y-%m-%d") }}</time>
+        </p>
+    </header>
 
-	<section class="post-body">
-		{{ content | safe }}
-	</section>
+    <section class="post-body">
+        {{ content | safe }}
+    </section>
 </article>

@@ -13,7 +13,10 @@ permalink: /blog/index.html
         {% for post in collections.posts | reverse %}
             <li class="post-item">
                 <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-                <div class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%Y-%m-%d") }}</time></div>
+                
+                <div class="post-meta">
+                    <time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%Y-%m-%d") }}</time>
+                </div>
             </li>
         {% endfor %}
     </ul>
