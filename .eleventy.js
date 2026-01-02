@@ -1,11 +1,6 @@
 import { HtmlBasePlugin } from '@11ty/eleventy';
 
 export default async function(eleventyConfig) {
-    // eleventyConfig.addPassthroughCopy('src/js');
-    // eleventyConfig.addPassthroughCopy('src/css');
-    // eleventyConfig.addPassthroughCopy('src/images');
-    // eleventyConfig.addPassthroughCopy('src/fonts');
-    // eleventyConfig.addPassthroughCopy('src/styles');
     eleventyConfig.addPassthroughCopy('assets');
 
     // Helps CD to read base path
@@ -31,8 +26,7 @@ export default async function(eleventyConfig) {
         dir: {
             input: 'src',
             output: '_site',
-            includes: '_includes',
-            layouts: '_layouts',
+            includes: '_templates',
         },
     };
 };
