@@ -133,31 +133,6 @@ nav .active a {
     margin-top: 0;
 }
 
-/* === FOOTER === */
-footer {
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    padding: 1rem 0;
-}
-
-footer p {
-    margin: 0;
-    color: var(--muted);
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-/* === LINKS === */
-a {
-    color: var(--accent);
-}
-
-/* === IMAGES === */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* === BLOG POST LIST === */
 .posts ul {
     list-style: none;
@@ -185,4 +160,78 @@ img {
     color: var(--muted);
     font-size: 0.9rem;
     margin-top: 0.25rem;
+}
+
+/* === CONTACT FORM === */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* === FOOTER === */
+footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* === LINKS === */
+a {
+    color: var(--accent);
+}
+
+/* === IMAGES === */
+img {
+    max-width: 100%;
+    height: auto;
 }
