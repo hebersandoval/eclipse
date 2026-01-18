@@ -162,6 +162,20 @@ nav .active a {
     margin-top: 0.25rem;
 }
 
+/* === SERVICES === */
+.services {
+    margin: 3rem 0;
+}
+
+.services h2 {
+    margin-bottom: 0.5rem;
+}
+
+.services p {
+    color: var(--muted);
+    margin-bottom: 2rem;
+}
+
 /* === CONTACT FORM === */
 form {
     max-width: 500px;
