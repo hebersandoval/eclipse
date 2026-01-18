@@ -1,6 +1,6 @@
 import { HtmlBasePlugin } from '@11ty/eleventy';
 
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
 
     // Helps CD to read base path
@@ -29,4 +29,4 @@ export default async function(eleventyConfig) {
             includes: '_templates',
         },
     };
-};
+}
