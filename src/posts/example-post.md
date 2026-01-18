@@ -5,10 +5,17 @@ layout: layouts/post.njk
 permalink: /blog/{{ title | slugify }}/
 ---
 
-This is the content of an example blog post.
+<main>
+    <div class="container">
+        <!-- Individual blog post article -->
+        
+            This is the content of an example blog post.
 
-It will be listed on the blog page and rendered in its own page with nav, footer, and the .md content injected.
+            It will be listed on the blog page and rendered in its own page with nav, footer, and the .md content injected.
 
-```js
-console.log('Hello world');
-```
+            ```js
+            console.log('Hello world');
+            ```
+
+    </div>
+</main>

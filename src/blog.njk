@@ -4,21 +4,27 @@ title: Blog
 permalink: /blog/index.html
 pageId: blog
 ---
-<header class="page-header">
-    <h1>Blog Posts</h1>
-    <p class="lead">Latest posts and updates.</p>
-</header>
+<main>
+    <div class="container">
+        <!-- Page header for blog listing -->
+        <header class="page-header">
+            <h1>Blog Posts</h1>
+            <p class="lead">Latest posts and updates.</p>
+        </header>
 
-<section class="posts-list">
-    <ul>
-        {% for post in collections.posts | reverse %}
-            <li class="post-item">
-                <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
-                
-                <div class="post-meta">
-                    <time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%Y-%m-%d") }}</time>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
-</section>
+        <!-- List of blog posts -->
+        <section class="posts">
+            <ul>
+                {% for post in collections.posts | reverse %}
+                    <li class="post-item">
+                        <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+                        
+                        <div class="post-meta">
+                            <time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%Y-%m-%d") }}</time>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</main>
