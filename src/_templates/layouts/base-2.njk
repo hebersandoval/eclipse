@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{{ title | default("My Site") }}</title>
+        <link rel="stylesheet" href="/assets/css/styles-2.css">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div class="container">
+                <!-- Brand/Logo -->
+                <div class="brand">
+                    <a href="/">{{ title | default("My Site") }}</a>
+                </div>
+                <!-- Primary Navigation -->
+                {% include "includes/nav-2.njk" %}
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT: Unique to each page -->
+        <main>
+            <div class="container">
+                {{ content | safe }}
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        {% include "includes/footer-2.njk" %}
+    </body>
+</html>
