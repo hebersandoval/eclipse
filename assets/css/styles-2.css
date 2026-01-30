@@ -188,12 +188,24 @@ a {
     color: #fff;
 }
 
+.btn--primary:hover {
+    background: #3a8ffd;
+}
+
 .btn--secondary {
     background: var(--color-secondary);
     color: #fff;
 }
 
+.btn--secondary:hover {
+    background: #00c8eb;
+}
+
 .btn--accent {
     background: var(--color-accent);
     color: #fff;
+}
+
+.btn--accent:hover {
+    background: #ec3000;
 }
