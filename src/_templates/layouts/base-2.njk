@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>{{ title | default("My Site") }}</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"/>
+        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/assets/css/normalize.css">
         <link rel="stylesheet" href="/assets/css/styles-2.css">
     </head>
     <body>
         <!-- HEADER -->
         <header>
-            <div class="container">
+            <div class="">
                 <!-- Brand/Logo -->
                 <div class="brand">
                     <a href="/">{{ title | default("My Site") }}</a>
@@ -23,7 +24,7 @@
 
         <!-- MAIN CONTENT: Unique to each page -->
         <main>
-            <div class="container">
+            <div class="">
                 {{ content | safe }}
             </div>
         </main>
