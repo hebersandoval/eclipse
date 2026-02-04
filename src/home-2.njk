@@ -11,7 +11,11 @@ pageId: home-2
             <a href="#" class="btn btn--accent btn--stretched">Get started</a>
         </header>
 
-        <img class="hero__image" src="/assets/images/banner.png" alt="">
+        <picture>
+            <source type="image/webp" srcset="/assets/images/banner.webp 1x, /assets/images/banner@2x.webp 2x">
+            <source type="image/png" srcset="/assets/images/banner.png 1x, /assets/images/banner@2x.png 2x">
+            <img class="hero__image" src="/assets/images/banner.png" alt="">
+        </picture>
     </div>
 </section>
 
