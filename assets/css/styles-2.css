@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
     color: var(--color-body);
@@ -42,8 +42,7 @@ h3 {
 }
 
 h1 {
-    /* 1 x font size of the html element */
-    font-size: 7rem; /* 70px */
+    font-size: 7rem;
 }
 
 h2 {
@@ -73,7 +72,7 @@ p {
     }
 
     h3 {
-        font-size: 2.4 rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -108,10 +107,10 @@ a {
 /* Badges */
 .badge {
     border-radius: 20px;
-    font-weight: 600;
     font-size: 2rem;
+    font-weight: 600;
     padding: 0.5rem 2rem;
-    white-space: nowarp;
+    white-space: nowrap;
 }
 
 .badge--primary {
@@ -135,7 +134,7 @@ a {
     }
 
     .badge--small {
-        font-size: 1.2 rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -151,7 +150,7 @@ a {
 }
 
 .list--tick {
-    list-style-image: url('/assets/images/icons/tick.svg');
+    list-style-image: url(/assets/images/tick.svg);
     padding-left: 3rem;
     color: var(--color-headings);
 }
@@ -192,8 +191,8 @@ a {
     height: 64px;
     border-radius: 100%;
     display: inline-flex;
-    justify-content: center; /* By default the horizontal axis */
-    align-items: center; /* By default the vertical axis */
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-container--accent {
@@ -237,7 +236,7 @@ a {
 }
 
 .btn--secondary:hover {
-    background: #00c8eb;
+    background: #05cdf0;
 }
 
 .btn--accent {
@@ -437,7 +436,7 @@ a {
     margin-top: 1rem;
 }
 
-/* Quote */
+/* Quotes */
 .quote {
     font-size: 3rem;
     font-style: italic;
@@ -493,7 +492,7 @@ a {
 
 @media screen and (min-width: 768px) {
     .grid--1x2 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -505,11 +504,12 @@ a {
 
 /* Testimonials */
 .testimonial {
-    padding: 3.5rem;
+    padding: 3rem;
 }
 
 .testimonial__image {
     position: relative;
+    margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -523,6 +523,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    .testimonial__image {
+        margin: 0;
+    }
+
     .testimonial .quote,
     .testimonial .quote__author {
         font-size: 2.4rem;
@@ -530,6 +534,7 @@ a {
 
     .testimonial .quote {
         margin-left: 6rem;
+        margin-right: 0;
     }
 }
 
@@ -591,7 +596,6 @@ a {
 }
 
 .collapsible__content {
-    /* display: none; */
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -603,7 +607,6 @@ a {
 }
 
 .collapsible--expanded .collapsible__content {
-    /* display: block; */
     max-height: 100vh;
     opacity: 1;
 }
@@ -691,7 +694,7 @@ a {
 }
 
 .nav__brand {
-    transform: translateY(6px);
+    transform: translateY(5px);
 }
 
 @media screen and (min-width: 768px) {
@@ -735,7 +738,7 @@ a {
     }
 }
 
-/* Domain block */
+/* Domain Block */
 .block-domain .input-group {
     box-shadow: 0 0 30px 20px #e6ebee;
     border: 0;
@@ -760,7 +763,7 @@ a {
     }
 }
 
-/* Plans block */
+/* Plans Block */
 .block-plans .grid {
     gap: 8rem 4rem;
 }
@@ -794,7 +797,7 @@ a {
     }
 }
 
-/* Showcase block */
+/* Showcase Block */
 .block-showcase__image > img {
     width: 100%;
 }
@@ -811,5 +814,85 @@ a {
     .block-showcase__image > img {
         width: auto;
         max-width: 700px;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #232323;
+}
+
+.footer a {
+    color: #777;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer__section {
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+    margin: 0;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__brand {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__brand img {
+    /* TODO: Consider refactoring this and applying it to all images. */
+    width: 100%;
+    max-width: 230px;
+}
+
+.footer__copyright {
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        font-size: 1.5rem;
+    }
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1;
+        margin-top: 1rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer__section {
+        border: 0;
+    }
+
+    .footer__heading {
+        font-size: 1.6rem;
     }
 }
