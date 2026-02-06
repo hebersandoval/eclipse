@@ -12,21 +12,16 @@
     <body>
         <!-- HEADER -->
         <header>
-            <div class="">
-                <!-- Brand/Logo -->
-                <div class="brand">
-                    <a href="/">{{ title | default("My Site") }}</a>
-                </div>
-                <!-- Primary Navigation -->
-                {% include "includes/nav-2.njk" %}
-            </div>
+            <!-- Brand/Logo -->
+            {# <a href="/">{{ title | default("My Site") }}</a> #}
+
+            <!-- Primary Navigation -->
+            {% include "includes/nav-2.njk" %}
         </header>
 
         <!-- MAIN CONTENT: Unique to each page -->
         <main>
-            <div class="">
-                {{ content | safe }}
-            </div>
+            {{ content | safe }}
         </main>
 
         <!-- FOOTER -->
