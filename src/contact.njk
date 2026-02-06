@@ -2,25 +2,49 @@
 layout: layouts/base.njk
 title: Contact us
 ---
-
-{# <h2>Contact us</h2> #}
-
-<main>
+<section class="block" data-aos="fade-up">
     <div class="container">
-        <!-- Page header -->
-        <header class="page-header">
+        <header class="block__header">
             <h1>Get in Touch</h1>
             <p class="lead">Have a question? Send us a message.</p>
         </header>
-        <!-- Contact form -->
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+
+        <div class="grid grid--1x2">
+            <div>
+                <div class="card">
+                    <div class="card__header">
+                        <h3>Contact Information</h3>
+                        <p>We're here to help — reach out and we'll get back to you shortly.</p>
+                    </div>
+                    <div class="card__body">
+                        <ul class="list">
+                            <li><strong>Email:</strong> support@example.com</li>
+                            <li><strong>Phone:</strong> +1 (555) 555-5555</li>
+                            <li><strong>Address:</strong> 123 Cloud Ave, Internet City</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form class="card" novalidate>
+                    <div class="card__header">
+                        <h3>Send us a message</h3>
+                    </div>
+                    <div class="card__body">
+                        <label for="name">Name</label>
+                        <input class="input" type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input class="input" type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea class="input" id="message" name="message" required style="min-height:12rem"></textarea>
+
+                        <button class="btn btn--primary btn--block" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</main>
+</section>
