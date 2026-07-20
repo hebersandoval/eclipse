@@ -354,6 +354,13 @@ a {
     font-size: 2.4rem;
 }
 
+.plan__price-label {
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    opacity: 0.8;
+}
+
 .plan__price {
     font-size: 6rem;
 }
@@ -406,6 +413,10 @@ a {
         font-size: 1.4rem;
     }
 
+    .plan__price-label {
+        font-size: 1.6rem;
+    }
+
     .plan__price {
         font-size: 5rem;
     }
@@ -417,6 +428,11 @@ a {
     .plan__description {
         font-size: 1.7rem;
     }
+}
+
+/* Plans Block - Header Spacing */
+.block-plans .block__header {
+    margin-bottom: 9rem;
 }
 
 /* Media */
