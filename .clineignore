@@ -42,3 +42,6 @@ _site/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Cline
+memory-bank/working-notes.md
