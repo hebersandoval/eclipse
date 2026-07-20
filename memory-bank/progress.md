@@ -13,7 +13,7 @@
 ## Primary Work: Content Replacement (All Placeholder)
 - [x] **Hero section** - Updated: "Your Vision, Engineered" headline, consulting-focused tagline, CTA links to /contact
 - [x] **Features section** - Updated: 3 services (Custom Web Development, Software & App Development, Ongoing Support & Maintenance). Removed WordPress slot. All "Learn more" links point to /contact. Section header: "Services That Drive Your Business Forward"
-- [ ] **Domain/lead-capture section** - Convert from domain search to consultation CTA
+- [x] **Domain/lead-capture section** - Converted to simple CTA: "Ready to Start Your Project?" header with "Book a Free Consultation" button linking to /contact. Removed domain search input and price list. Uses existing .block__header centering pattern.
 - [ ] **Plan section** - Replace hosting plans with service packages/engagement types
 - [ ] **Showcase section** - Convert from control panel to process/methodology overview
 - [ ] **Testimonials** - Replace placeholder "Jane Doe" with real client testimonials
