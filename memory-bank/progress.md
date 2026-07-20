@@ -11,7 +11,7 @@
 - [x] AOS animations integrated
 
 ## Primary Work: Content Replacement (All Placeholder)
-- [ ] **Hero section** - Replace "Cloud Hosting for Pros" with consulting value proposition
+- [x] **Hero section** - Updated: "Your Vision, Engineered" headline, consulting-focused tagline, CTA links to /contact
 - [ ] **Features section** - Replace Lorem ipsum with actual services offered
 - [ ] **Domain/lead-capture section** - Convert from domain search to consultation CTA
 - [ ] **Plan section** - Replace hosting plans with service packages/engagement types
@@ -23,7 +23,8 @@
 - [ ] **Meta tags** - Update description, og:title, og:description, og:image
 
 ## Incomplete / Needs Work
-- [ ] **Contact form** - Previous implementation removed due to not matching design system (component style, CSS custom properties, BEM naming conventions). Needs to be rebuilt using the existing design language rather than a generic form. Not yet started.
+- [x] **Contact page stub** - Created minimal contact.njk using existing design system classes (.block, .container, .block__header). Links to mailto:hello@simplyenginee.red. Note: This is a temporary stub, NOT the full custom-designed contact form.
+- [ ] **Contact form (custom)** - Previous implementation removed due to not matching design system (component style, CSS custom properties, BEM naming conventions). Needs to be rebuilt using the existing design language rather than a generic form. Not yet started. Separate from the stub above.
 - [ ] **CSS TODO** - Line 856 in styles.css has: `/* TODO: Consider refactoring this and applying it to all images. */`
 
 ## Known Issues
