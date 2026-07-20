@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+
+# Build output
+dist/
+build/
+out/
+_site/
+.next/
+*.min.js
+
+# Secrets & environment
+.env
+.env.*
+*.pem
+*.key
+
+# Logs & caches
+*.log
+.cache/
+.turbo/
+
+# Version control / editor
+.git/
+.vscode/
+.idea/
+
+# Large or binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.pdf
+
+# Lockfiles (large, low signal for Cline to read in full)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
