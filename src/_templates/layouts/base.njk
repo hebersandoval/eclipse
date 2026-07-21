@@ -3,7 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        {% set pageTitle = 'Simply Engineered - Software & Web Development Consulting' if pageId == 'home' else title + ' | Simply Engineered' %}
+
+        {% if pageId == "home" %}
+            {% set pageTitle = "Simply Engineered | Software & Web Development Consulting" %}
+        {% else %}
+            {% set pageTitle = title + " | Simply Engineered" %}
+        {% endif %}
+
         <meta name="description" content="{{ description | default('Custom software and web development consulting for small-to-medium businesses, startups, and entrepreneurs. From landing pages to full web applications.') }}">
         <meta property="og:title" content="{{ pageTitle }}">
         <meta property="og:description" content="{{ description | default('Custom software and web development consulting for small-to-medium businesses, startups, and entrepreneurs. From landing pages to full web applications.') }}">
@@ -15,6 +21,7 @@
         <meta name="twitter:description" content="{{ description | default('Custom software and web development consulting for small-to-medium businesses, startups, and entrepreneurs. From landing pages to full web applications.') }}">
         <meta name="twitter:image" content="NEEDS INPUT: [og:image URL - deferred]">
         <meta property="og:url" content="https://simplyenginee.red">
+        <meta name="robots" content="index,follow">
 
         <link rel="canonical" href="{{ site.url}}{{ page.url }}">
 
