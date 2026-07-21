@@ -17,8 +17,8 @@
 - [x] **Plan section** - Updated: 3 tiers (Launch/Build/Scale) with "How We Work Together" header. "Starting at" pricing with NEEDS INPUT placeholders for actual prices and support durations. Build tier highlighted as "Most Popular". All CTAs link to /contact.
 - [x] **Showcase section** - Converted to 4-step process overview: Discovery, Planning, Build, Launch & Support. Header: "From Idea to Launch". Icons updated (#computer, #growth, #easy, #clock). Image deferred.
 - [x] **About section** - Converted testimonials.njk to About section. Header: "The Person Behind the Code". Bio paragraph (8 years experience, healthcare background) + standalone tagline ("Happiness is not a destination — it's a journey.") with quote icon. Attribution: Héber Sandoval, Founder & Developer. Photo deferred.
-- [ ] **Callout section** - Update callout.njk with consulting-focused CTA (currently has Lorem ipsum placeholder text)
-- [ ] **Navigation** - Replace all `#` links with actual page links
+- [x] **Callout section** - Updated: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
+- [x] **Navigation** - Updated: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
 - [ ] **Footer** - Update footer links to match actual site structure
 - [ ] **Blog** - Add real blog posts (currently only example-post.md)
 - [ ] **Meta tags** - Update description, og:title, og:description, og:image

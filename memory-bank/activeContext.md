@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Focus
-Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, and About sections complete.
+Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, and callout sections complete.
 
 ## Recent Changes
 - Created memory-bank/ folder with 6 core files
@@ -13,9 +13,10 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - **Plan section updated**: 3 tiers (Launch/Build/Scale) with "How We Work Together" header. Prices and support durations use NEEDS INPUT placeholders. Build tier highlighted as "Most Popular".
 - **Showcase section converted**: 4-step process overview (Discovery, Planning, Build, Launch & Support) with "From Idea to Launch" header. Icons updated to match process steps.
 - **About section created**: Converted testimonials.njk to About section. Header: "The Person Behind the Code". Bio paragraph + standalone tagline with quote icon. Photo deferred.
+- **Navigation updated**: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
+- **Callout section updated**: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
 
 ## Next Steps
-- Navigation links update
 - Footer links update
 - Blog posts
 - Meta tags update
@@ -31,3 +32,5 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - Plan section uses project-based tiers (Launch/Build/Scale) with "starting at" pricing. Prices and support durations are NEEDS INPUT placeholders - not invented.
 - Showcase section uses 4-step process (not 3). Image deferred. Icons: #computer, #growth, #easy, #clock.
 - About section: Bio is plain paragraph (semantic), tagline is blockquote. Reuses existing .quote and .quote__organization classes. Photo deferred.
+- Navigation uses /#anchor format (with leading slash) so links work from any page on the site.
+- Callout heading "Let's Build Something Great" chosen to be distinct from domain section's "Ready to Start Your Project?"
