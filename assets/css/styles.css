@@ -555,6 +555,18 @@ a {
     }
 }
 
+/* About Section */
+.about__content {
+    padding: 2rem;
+}
+
+.about__tagline {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
 /* Callouts */
 .callout {
     padding: 4rem;
