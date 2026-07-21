@@ -15,7 +15,7 @@
 - [x] **Features section** - Updated: 3 services (Custom Web Development, Software & App Development, Ongoing Support & Maintenance). Removed WordPress slot. All "Learn more" links point to /contact. Section header: "Services That Drive Your Business Forward"
 - [x] **Domain/lead-capture section** - Converted to simple CTA: "Ready to Start Your Project?" header with "Book a Free Consultation" button linking to /contact. Removed domain search input and price list. Uses existing .block__header centering pattern.
 - [x] **Plan section** - Updated: 3 tiers (Launch/Build/Scale) with "How We Work Together" header. "Starting at" pricing with NEEDS INPUT placeholders for actual prices and support durations. Build tier highlighted as "Most Popular". All CTAs link to /contact.
-- [ ] **Showcase section** - Convert from control panel to process/methodology overview
+- [x] **Showcase section** - Converted to 4-step process overview: Discovery, Planning, Build, Launch & Support. Header: "From Idea to Launch". Icons updated (#computer, #growth, #easy, #clock). Image deferred.
 - [ ] **Testimonials** - Replace placeholder "Jane Doe" with real client testimonials
 - [ ] **Navigation** - Replace all `#` links with actual page links
 - [ ] **Footer** - Update footer links to match actual site structure
