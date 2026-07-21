@@ -20,7 +20,7 @@ Small-to-medium businesses, startups, individual entrepreneurs, and local busine
 | plan.njk | Service packages / engagement types (not hosting plans) |
 | features.njk | Services offered |
 | showcase.njk | Process/methodology overview (how engagements work) |
-| testimonials.njk | Client testimonials (stays the same) |
+| testimonials.njk | About Me section (bio, photo, personal mission/tagline) — no client testimonials exist yet for this new business, may be reintroduced elsewhere later once real client testimonials are available |
 | callout.njk | Call to action for consulting inquiries |
 
 ## Tone & Voice
