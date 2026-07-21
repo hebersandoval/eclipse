@@ -19,7 +19,7 @@
 - [x] **About section** - Converted testimonials.njk to About section. Header: "The Person Behind the Code". Bio paragraph (8 years experience, healthcare background) + standalone tagline ("Happiness is not a destination — it's a journey.") with quote icon. Attribution: Héber Sandoval, Founder & Developer. Photo deferred.
 - [x] **Callout section** - Updated: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
 - [x] **Navigation** - Updated: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
-- [ ] **Footer** - Update footer links to match actual site structure
+- [x] **Footer** - Updated: 3-column structure (Services, Company, Connect) with real links. Removed hosting-specific content (Products, Domains, Support sections). Copyright line unchanged.
 - [ ] **Blog** - Add real blog posts (currently only example-post.md)
 - [ ] **Meta tags** - Update description, og:title, og:description, og:image
 
@@ -30,6 +30,5 @@
 
 ## Known Issues
 - Plan cards all have duplicate content (all say "Entry" with same specs)
-- Navigation links are all placeholder `#`
 - `assets/styles/` folder contains unused CSS files (style.css, style-2.css, font-awesome.min.css, loader.css)
 - `assets/styles/normalize.css` duplicates `assets/css/normalize.css`
