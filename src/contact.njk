@@ -11,13 +11,54 @@ description: "Get in touch with Simply Engineered to discuss your software or we
         <p>Ready to discuss your project? Reach out and let's talk about how we can bring your vision to life.</p>
     </header>
 
-    <div>
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:hello@simplyenginee.red">hello@simplyenginee.red</a>
-        </p>
-        <p>
-            <em>Note: This is a temporary contact page. A custom-designed contact form matching the site's design system is planned for a future update.</em>
+    <div class="card form">
+        <form action="https://formspree.io/f/mwvgqdpp" method="POST">
+            <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" aria-hidden="true" autocomplete="off">
+
+            <div class="form__field">
+                <label class="form__label" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form__field">
+                <label class="form__label" for="email">Email</label>
+                <input class="input" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form__field">
+                <label class="form__label" for="project-type">Project Type</label>
+                <select class="input" id="project-type" name="project-type">
+                    <option value="">Select one...</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Software/App Development">Software/App Development</option>
+                    <option value="Ongoing Support">Ongoing Support</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form__field">
+                <label class="form__label" for="budget">Budget Range</label>
+                <select class="input" id="budget" name="budget">
+                    <option value="">Select one...</option>
+                    <option value="Under $1,000">Under $1,000</option>
+                    <option value="$1,000–$3,000">$1,000–$3,000</option>
+                    <option value="$3,000–$10,000">$3,000–$10,000</option>
+                    <option value="$10,000+">$10,000+</option>
+                    <option value="Not Sure">Not Sure</option>
+                </select>
+            </div>
+
+            <div class="form__field">
+                <label class="form__label" for="message">Message</label>
+                <textarea class="input" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--block">Send Message</button>
+        </form>
+    </div>
+
+    <div class="form__footer">
+        <p>Or email us directly at <a href="mailto:hello@simplyenginee.red">hello@simplyenginee.red</a>
         </p>
     </div>
 </section>

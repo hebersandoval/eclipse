@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Focus
-Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, callout, footer, and meta tags complete.
+Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, callout, footer, meta tags, and contact form complete.
 
 ## Recent Changes
 - Created memory-bank/ folder with 6 core files
@@ -17,6 +17,7 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - **Callout section updated**: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
 - **Footer updated**: 3-column structure (Services, Company, Connect) with real links. Removed hosting-specific content (Products, Domains, Support sections). Copyright line unchanged.
 - **Meta tags updated**: Dynamic title/description via pageId and frontmatter. Added Twitter cards, canonical URL, robots tag. og:image and twitter:image use logo.svg (temporary — needs dedicated social-share image before launch). Removed duplicate og:url.
+- **Contact form built**: Real form replacing temporary stub. Uses Formspree (https://formspree.io/f/mwvgqdpp) for submission handling. Fields: Name, Email, Project Type, Budget Range, Message. Honeypot spam protection with `display:none`, `tabindex="-1"`, `aria-hidden="true"`, `autocomplete="off"`. Mailto email link kept as secondary contact method. New CSS classes: `.form`, `.form__label`, `.form__field`, `.form__footer`, `.form__honeypot`.
 
 ## Next Steps
 - Blog posts
@@ -25,7 +26,7 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - Business name: "Simply Engineered" (stays as-is)
 - Target audience: Small-to-medium businesses, startups, entrepreneurs, local businesses
 - Tone: Professional but approachable
-- Contact stub uses existing .block/.container pattern (not custom form yet)
+- Contact form uses Formspree for submission handling (static site, no backend). Honeypot field uses `display:none` (not sr-only pattern) with `tabindex="-1"`, `aria-hidden="true"`, `autocomplete="off"`.
 - Features section uses 3 services (not 4) - technical consulting not a standalone offering
 - Feature images deferred (same as hero image)
 - Domain section uses simple CTA (Option 1) - no embedded form/email capture. Uses existing .block__header centering pattern.
