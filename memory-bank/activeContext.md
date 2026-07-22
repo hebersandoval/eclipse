@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Focus
-Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, callout, and footer sections complete.
+Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, callout, footer, and meta tags complete.
 
 ## Recent Changes
 - Created memory-bank/ folder with 6 core files
@@ -16,10 +16,10 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - **Navigation updated**: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
 - **Callout section updated**: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
 - **Footer updated**: 3-column structure (Services, Company, Connect) with real links. Removed hosting-specific content (Products, Domains, Support sections). Copyright line unchanged.
+- **Meta tags updated**: Dynamic title/description via pageId and frontmatter. Added Twitter cards, canonical URL, robots tag. og:image and twitter:image use logo.svg (temporary — needs dedicated social-share image before launch). Removed duplicate og:url.
 
 ## Next Steps
 - Blog posts
-- Meta tags update
 
 ## Active Decisions
 - Business name: "Simply Engineered" (stays as-is)
@@ -35,3 +35,4 @@ Content replacement work in progress. Hero, features, domain/CTA, plan, showcase
 - Navigation uses /#anchor format (with leading slash) so links work from any page on the site.
 - Callout heading "Let's Build Something Great" chosen to be distinct from domain section's "Ready to Start Your Project?"
 - Footer uses 3-column structure (Services, Company, Connect) with flexible CSS grid (auto-fit adapts to any number of columns)
+- og:image and twitter:image temporarily use logo.svg — should be replaced with a real dedicated social-share image (1200x630px) before launch

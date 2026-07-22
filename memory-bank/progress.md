@@ -21,7 +21,7 @@
 - [x] **Navigation** - Updated: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
 - [x] **Footer** - Updated: 3-column structure (Services, Company, Connect) with real links. Removed hosting-specific content (Products, Domains, Support sections). Copyright line unchanged.
 - [ ] **Blog** - Add real blog posts (currently only example-post.md)
-- [ ] **Meta tags** - Update description, og:title, og:description, og:image
+- [x] **Meta tags** - Updated: Dynamic title/description via pageId and frontmatter. Added Twitter cards (summary_large_image), canonical URL, robots tag. og:image and twitter:image use logo.svg (temporary — needs dedicated 1200x630px social-share image before launch). Removed duplicate og:url.
 
 ## Incomplete / Needs Work
 - [x] **Contact page stub** - Created minimal contact.njk using existing design system classes (.block, .container, .block__header). Links to mailto:hello@simplyenginee.red. Note: This is a temporary stub, NOT the full custom-designed contact form.
