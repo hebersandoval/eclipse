@@ -30,9 +30,11 @@
         <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/assets/css/normalize.css">
         <link rel="stylesheet" href="/assets/css/styles.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
+        <!-- Skip Link - Accessibility -->
+        <a href="#main" class="skip-link">Skip to content</a>
+
         <!-- Brand/Logo -->
         {# <a href="/">{{ title | default("My Site") }}</a> #}
 
@@ -48,9 +50,5 @@
         {% include "components/footer.njk" %}
 
         <script src="/assets/js/index.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
     </body>
 </html>
