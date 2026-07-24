@@ -8,6 +8,9 @@
         "clean": "npx rimraf _site",
         "build": "npm run clean && npx @11ty/eleventy"
     },
+    "engines": {
+        "node": "24.x"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/hebersandoval/eclipse.git"
