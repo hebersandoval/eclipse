@@ -12,6 +12,12 @@ a {
     outline-offset: 2px;
 }
 
+/* Overflow guard - prevents horizontal scroll on mobile */
+html,
+body {
+    overflow-x: hidden;
+}
+
 /* Skip Link - Accessibility */
 .skip-link {
     position: absolute;

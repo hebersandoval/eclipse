@@ -16,6 +16,7 @@
 
 .about__tagline {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 1.5rem;
     margin: 3rem 0;

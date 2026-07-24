@@ -68,6 +68,13 @@
     padding-right: 6rem;
 }
 
+@media screen and (max-width: 480px) {
+    .btn--stretched {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
 .btn--block {
     width: 100%;
     display: inline-block;

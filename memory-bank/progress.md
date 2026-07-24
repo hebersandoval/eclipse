@@ -37,7 +37,12 @@ Live, deployed at www.simplyenginee.red
 - [ ] Replace hardcoded spacing values with spacing tokens throughout blocks (e.g., `margin: 3rem 0` → `var(--space-7)`)
 
 ## Known Issues
-- None currently. Site builds and deploys cleanly.
+- Fixed: White gap on narrow mobile screens (Galaxy Note 3 and similar). Caused by combination of `clip-path` section dividers, wide stretched button padding, and no `overflow-x: hidden` guard. Patched with `body { overflow-x: hidden }`, `max-width: 100%` on hero images, and reduced `btn--stretched` padding on ≤480px.
+
+## Recent Fixes (Jul 24, 2026)
+- [x] Mobile horizontal overflow: added `body { overflow-x: hidden }` to `base/base.css`
+- [x] Hero image: added `max-width: 100%` to `.hero__image` in `blocks/hero.css`
+- [x] Stretched buttons: reduced horizontal padding on narrow screens (≤480px) in `blocks/button.css`
 
 ## Next Milestones
 - Elevation improvements (design polish, typography, spacing rhythm)
