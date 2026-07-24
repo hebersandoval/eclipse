@@ -26,6 +26,11 @@
 
         <title>{{ pageTitle }}</title>
 
+        <!-- Resource Hints -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="https://formspree.io">
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
         <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/assets/css/normalize.css">
@@ -56,6 +61,23 @@
             </svg>
         </button>
 
-        <script src="/assets/js/index.js"></script>
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "Simply Engineered",
+                "description": "Custom software and web development consulting for small-to-medium businesses, startups, and entrepreneurs.",
+                "url": "{{ site.url }}",
+                "email": "hello@simplyenginee.red",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Héber Sandoval"
+                },
+                "priceRange": "$$"
+            }
+        </script>
+
+        <script src="/assets/js/index.js" defer></script>
     </body>
 </html>
