@@ -71,8 +71,8 @@ html {
 
 body {
     font-family: var(--font-sans);
-    font-size: 2.4rem;
-    line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.7;
     color: var(--color-body);
 }
 
@@ -254,7 +254,7 @@ a {
 }
 
 .icon-container {
-    background: #f3f9fa;
+    background: var(--color-light-bg);
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -421,11 +421,14 @@ a {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    transition: box-shadow 0.2s ease-out;
+    transition:
+        box-shadow 0.2s ease-out,
+        transform 0.2s ease-out;
 }
 
 .card:hover {
     box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
 }
 
 .card__header,
@@ -493,7 +496,7 @@ a {
 }
 
 .plan--popular {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .plan--popular .card__header {
@@ -510,11 +513,11 @@ a {
 }
 
 .plan:hover {
-    transform: scale(1.05);
+    transform: translateY(-4px);
 }
 
 .plan--popular:hover {
-    transform: scale(1.15);
+    transform: scale(1.05) translateY(-4px);
 }
 
 @media screen and (min-width: 1024px) {
@@ -541,7 +544,12 @@ a {
 
 /* Plans Block - Header Spacing */
 .block-plans .block__header {
-    margin-bottom: 9rem;
+    margin-bottom: var(--space-7);
+}
+
+/* Plans Block - Grid Gap */
+.block-plans .grid {
+    gap: var(--space-7) var(--space-4);
 }
 
 /* Media */
@@ -665,6 +673,16 @@ a {
 }
 
 /* About Section */
+.about {
+    align-items: center;
+    gap: var(--space-7);
+}
+
+.about__image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+}
+
 .about__content {
     padding: 2rem;
 }
@@ -674,6 +692,19 @@ a {
     align-items: flex-start;
     gap: 1.5rem;
     margin: 3rem 0;
+}
+
+.about__attribution {
+    color: var(--color-headings);
+    opacity: 0.4;
+    font-size: 2rem;
+    font-style: normal;
+}
+
+@media screen and (min-width: 1024px) {
+    .about__attribution {
+        font-size: 1.6rem;
+    }
 }
 
 /* Callouts */
@@ -757,7 +788,7 @@ a {
 
 .block__header {
     text-align: center;
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-6);
 }
 
 .block__heading {
@@ -815,10 +846,26 @@ a {
 .nav__item > a {
     color: var(--color-dark-text-muted);
     transition: color 0.3s;
+    position: relative;
 }
 
 .nav__item > a:hover {
     color: var(--color-white);
+}
+
+.nav__item > a[aria-current='page'] {
+    color: var(--color-white);
+}
+
+.nav__item > a[aria-current='page']::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-accent);
+    border-radius: 1px;
 }
 
 .nav__toggler {
@@ -870,6 +917,17 @@ a {
     margin: var(--space-5) 0 var(--space-7);
 }
 
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+.hero__actions .btn {
+    margin: 0;
+}
+
 .hero__image {
     width: 100%;
 }
@@ -911,20 +969,21 @@ a {
     }
 }
 
-/* Plans Block */
-.block-plans .grid {
-    gap: 8rem 4rem;
-}
-
-.block-plans .card {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
 /* Features */
 .feature {
-    gap: var(--space-7) var(--space-4);
-    margin: var(--space-8) 0;
+    gap: var(--space-6) var(--space-4);
+    margin: var(--space-6) 0;
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    transition:
+        box-shadow 0.2s ease-out,
+        transform 0.2s ease-out;
+}
+
+.feature:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .feature:first-of-type {
@@ -1077,6 +1136,20 @@ a {
 
 .form .input {
     width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+    transition:
+        border-color 0.2s ease-out,
+        box-shadow 0.2s ease-out;
+}
+
+.form .input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form textarea.input {
@@ -1095,5 +1168,9 @@ a {
 @media screen and (min-width: 1024px) {
     .form__label {
         font-size: 1.6rem;
+    }
+
+    .form .input {
+        font-size: 1.5rem;
     }
 }
