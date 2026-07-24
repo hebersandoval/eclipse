@@ -1,4 +1,8 @@
 :root {
+    /* Primary brand colors */
+    --color-primary: #126de4;
+    --color-secondary: #02cdf1;
+
     /* Refined accent color - engineering-focused, not loud */
     --color-accent: #2563eb;
     --color-accent-hover: #1d4ed8;
@@ -12,6 +16,16 @@
 
     /* Semantic */
     --color-success: #10b981;
+
+    /* Dark theme */
+    --color-dark: #0a0a0f;
+    --color-dark-text: #9ca3af;
+    --color-dark-text-muted: #d2d0db;
+
+    /* Light theme */
+    --color-white: #ffffff;
+    --color-light-bg: #f3f9fa;
+    --color-placeholder: #cdcbd7;
 
     /* Typography */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -47,7 +61,7 @@
 /* Typography */
 ::selection {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 html {
@@ -112,7 +126,7 @@ p {
     top: -40px;
     left: 0;
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-white);
     padding: 0.5rem 1rem;
     z-index: 100;
     text-decoration: none;
@@ -169,12 +183,12 @@ a {
 
 .badge--primary {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .badge--secondary {
     background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .badge--small {
@@ -236,7 +250,7 @@ a {
 }
 
 .icon--white {
-    fill: #fff;
+    fill: var(--color-white);
 }
 
 .icon-container {
@@ -277,7 +291,7 @@ a {
 
 .btn--primary {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn--primary:hover {
@@ -287,7 +301,7 @@ a {
 
 .btn--secondary {
     background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn--secondary:hover {
@@ -297,7 +311,7 @@ a {
 
 .btn--accent {
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn--accent:hover {
@@ -306,14 +320,14 @@ a {
 }
 
 .btn--outline {
-    background: #fff;
+    background: var(--color-white);
     color: var(--color-headings);
     border: 2px solid var(--color-headings);
 }
 
 .btn--outline:hover {
     background: var(--color-headings);
-    color: #fff;
+    color: var(--color-white);
     transform: translateY(-1px);
 }
 
@@ -326,6 +340,19 @@ a {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* Screen Reader Only - Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .btn--stretched {
@@ -363,7 +390,7 @@ a {
 }
 
 ::placeholder {
-    color: #cdcbd7;
+    color: var(--color-placeholder);
 }
 
 .input-group {
@@ -408,12 +435,12 @@ a {
 
 .card--primary .card__header {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .card--secondary .card__header {
     background: var(--color-secondary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .card--primary .badge--primary {
@@ -430,7 +457,7 @@ a {
 }
 
 .plan__name {
-    color: #fff;
+    color: var(--color-white);
     margin: 0;
     font-weight: 500;
     font-size: 2.4rem;
@@ -657,11 +684,11 @@ a {
 
 .callout--primary {
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .callout__heading {
-    color: #fff;
+    color: var(--color-white);
     margin-top: 0;
     font-size: 3rem;
 }
@@ -738,14 +765,14 @@ a {
 }
 
 .block--dark {
-    background: #0a0a0f;
-    color: #9ca3af;
+    background: var(--color-dark);
+    color: var(--color-dark-text);
 }
 
 .block--dark h1,
 .block--dark h2,
 .block--dark h3 {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .block--skewed-right {
@@ -786,12 +813,12 @@ a {
 }
 
 .nav__item > a {
-    color: #d2d0db;
+    color: var(--color-dark-text-muted);
     transition: color 0.3s;
 }
 
 .nav__item > a:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .nav__toggler {
@@ -838,7 +865,7 @@ a {
 /* Hero */
 .hero__tagline {
     font-size: clamp(1.6rem, 3vw, 2rem);
-    color: #9ca3af;
+    color: var(--color-dark-text);
     letter-spacing: 0.5px;
     margin: var(--space-5) 0 var(--space-7);
 }
@@ -946,16 +973,16 @@ a {
 
 /* Footer */
 .footer {
-    background: #0a0a0f;
+    background: var(--color-dark);
 }
 
 .footer a {
-    color: #9ca3af;
+    color: var(--color-dark-text);
     transition: color 0.3s;
 }
 
 .footer a:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .footer__section {
@@ -985,7 +1012,7 @@ a {
 
 .footer__copyright {
     font-size: 2.1rem;
-    color: #fff;
+    color: var(--color-white);
     opacity: 0.3;
 }
 
