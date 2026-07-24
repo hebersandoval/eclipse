@@ -5,60 +5,122 @@ permalink: /contact/index.html
 pageId: contact
 description: "Get in touch with Simply Engineered to discuss your software or web development project. Let's bring your vision to life."
 ---
+
 <section class="block container">
-    <header class="block__header">
-        <h1 class="block__heading">Get in Touch</h1>
-        <p>Ready to discuss your project? Reach out and let's talk about how we can bring your vision to life.</p>
-    </header>
+    <div class="grid grid--1x2 contact">
+        <!-- Left Column: Trust & Information -->
+        <div class="contact__info">
+            <h1 class="block__heading">Let's Build Something Great</h1>
+            <p class="contact__intro">
+                Have a project in mind? Let's discuss how we can help bring your vision to life. No pressure, no obligation—just a conversation about what's possible.
+            </p>
 
-    <div class="card form">
-        <form action="https://formspree.io/f/mwvgqdpp" method="POST">
-            <input type="text" name="_gotcha" class="form__honeypot sr-only" tabindex="-1" autocomplete="off">
-
-            <div class="form__field">
-                <label class="form__label" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" required>
+            <div class="contact__trust">
+                <h2 class="contact__trust-heading">Why Reach Out?</h2>
+                <ul class="list">
+                    <li class="contact__trust-item">
+                        <svg class="icon icon--primary icon--small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <span>Free consultation</span>
+                    </li>
+                    <li class="contact__trust-item">
+                        <svg class="icon icon--primary icon--small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <span>No obligation</span>
+                    </li>
+                    <li class="contact__trust-item">
+                        <svg class="icon icon--primary icon--small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <span>Response within 1 business day</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="form__field">
-                <label class="form__label" for="email">Email</label>
-                <input class="input" type="email" id="email" name="email" required>
+            <div class="contact__details">
+                <h2 class="contact__details-heading">Contact Information</h2>
+                <ul class="list">
+                    <li>
+                        <a href="mailto:hello@simplyenginee.red">hello@simplyenginee.red</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/hebersandoval/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <div class="form__field">
-                <label class="form__label" for="project-type">Project Type</label>
-                <select class="input" id="project-type" name="project-type">
-                    <option value="">Select one...</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Software/App Development">Software/App Development</option>
-                    <option value="Ongoing Support">Ongoing Support</option>
-                    <option value="Other">Other</option>
-                </select>
+        <!-- Right Column: Contact Form -->
+        <div class="contact__form-wrapper">
+            <div class="card form--contact">
+                <form action="https://formspree.io/f/mwvgqdpp" method="POST">
+                    <input type="text" name="_gotcha" class="form__honeypot sr-only" tabindex="-1" autocomplete="off">
+
+                    <div class="form__field">
+                        <label class="form__label" for="name">Name</label>
+                        <input class="input" type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="input" type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="project-type">Project Type</label>
+                        <select class="input" id="project-type" name="project-type">
+                            <option value="">Select one...</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Software/App Development">Software/App Development</option>
+                            <option value="Ongoing Support">Ongoing Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="budget">Budget Range</label>
+                        <select class="input" id="budget" name="budget">
+                            <option value="">Select one...</option>
+                            <option value="Under $1,000">Under $1,000</option>
+                            <option value="$1,000–$3,000">$1,000–$3,000</option>
+                            <option value="$3,000–$10,000">$3,000–$10,000</option>
+                            <option value="$10,000+">$10,000+</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="message">Message</label>
+                        <textarea class="input" id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--accent btn--block">Send Message</button>
+                </form>
             </div>
-
-            <div class="form__field">
-                <label class="form__label" for="budget">Budget Range</label>
-                <select class="input" id="budget" name="budget">
-                    <option value="">Select one...</option>
-                    <option value="Under $1,000">Under $1,000</option>
-                    <option value="$1,000–$3,000">$1,000–$3,000</option>
-                    <option value="$3,000–$10,000">$3,000–$10,000</option>
-                    <option value="$10,000+">$10,000+</option>
-                    <option value="Not Sure">Not Sure</option>
-                </select>
-            </div>
-
-            <div class="form__field">
-                <label class="form__label" for="message">Message</label>
-                <textarea class="input" id="message" name="message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--accent btn--block">Send Message</button>
-        </form>
+        </div>
     </div>
 
-    <div class="form__footer">
-        <p>Or email us directly at <a href="mailto:hello@simplyenginee.red">hello@simplyenginee.red</a>
-        </p>
+    <!-- What Happens Next? -->
+    <div class="contact__process">
+        <h2 class="contact__process-heading">What Happens Next?</h2>
+        <div class="grid grid--1x3">
+            <div class="contact__process-step">
+                <span class="contact__process-number">1</span>
+                <h3 class="contact__process-title">We Review</h3>
+                <p>We'll carefully review your message and project details to understand your needs and goals.</p>
+            </div>
+            <div class="contact__process-step">
+                <span class="contact__process-number">2</span>
+                <h3 class="contact__process-title">We Connect</h3>
+                <p>We'll schedule a free consultation to discuss your project and explore how we can help.</p>
+            </div>
+            <div class="contact__process-step">
+                <span class="contact__process-number">3</span>
+                <h3 class="contact__process-title">We Propose</h3>
+                <p>If we're a good fit, you'll receive a detailed proposal with clear next steps and timeline.</p>
+            </div>
+        </div>
     </div>
 </section>
