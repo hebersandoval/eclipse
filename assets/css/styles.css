@@ -829,9 +829,13 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 1rem;
+    padding: 1.2rem clamp(1.6rem, 3vw, 3.2rem);
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.03),
+        0 10px 40px rgba(0, 0, 0, 0.18);
 }
 
 .nav__list {
@@ -840,18 +844,41 @@ a {
 }
 
 .nav__item {
-    padding: 0.5rem 2rem;
+    padding: 1.4rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav__item > a {
     color: var(--color-dark-text-muted);
-    transition: color 0.3s;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
     position: relative;
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .nav__item > a:hover {
     color: var(--color-white);
+}
+
+.nav__item > a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.55rem;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.18s ease;
+}
+
+.nav__item > a:hover::after,
+.nav__item > a[aria-current='page']::after {
+    transform: scaleX(1);
 }
 
 .nav__item > a[aria-current='page'] {
@@ -869,10 +896,21 @@ a {
     border-radius: 1px;
 }
 
+.nav__item a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+    border-radius: 6px;
+}
+
 .nav__toggler {
-    opacity: 0.5;
-    transition: box-shadow 0.15s;
-    cursor: pointer;
+    opacity: 0.8;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav__toggler:hover {
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .nav.collapsible--expanded .nav__toggler {
@@ -882,12 +920,14 @@ a {
 }
 
 .nav__brand {
-    transform: translateY(5px);
+    display: flex;
+    align-items: center;
 }
 
 .nav__brand img {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -901,7 +941,7 @@ a {
         font-size: 1.6rem;
         max-height: 100%;
         opacity: 1;
-        gap: var(--space-6);
+        gap: clamp(2.4rem, 3vw, 4rem);
     }
 
     .nav__item {
