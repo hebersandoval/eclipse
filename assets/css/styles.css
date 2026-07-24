@@ -828,13 +828,9 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
     padding: 1.4rem clamp(1.6rem, 3vw, 3.2rem);
-
     background: var(--color-dark);
-
     border-bottom: none;
-
     position: relative;
     z-index: 100;
 }
