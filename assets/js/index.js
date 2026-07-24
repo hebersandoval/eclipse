@@ -20,3 +20,23 @@ collapsibles.forEach((item) => {
         this.classList.toggle('collapsible--expanded');
     });
 });
+
+// Back to top button
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.classList.add('back-to-top--visible');
+        } else {
+            backToTop.classList.remove('back-to-top--visible');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    });
+}
