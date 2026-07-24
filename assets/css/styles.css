@@ -798,7 +798,7 @@ a {
 .block--dark {
     background: var(--color-dark);
     color: var(--color-dark-text);
-    background-image: radial-gradient(ellipse at 20% 50%, rgba(18, 109, 228, 0.06) 0%, transparent 50%);
+    background-image: radial-gradient(ellipse at 20% 50%, rgba(18, 109, 228, 0.09) 0%, transparent 50%);
 }
 
 .block--dark h1,
@@ -824,18 +824,19 @@ a {
 
 /* Navigation Bar */
 .nav {
-    background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1.2rem clamp(1.6rem, 3vw, 3.2rem);
     align-items: center;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.03),
-        0 10px 40px rgba(0, 0, 0, 0.18);
+    flex-wrap: wrap;
+
+    padding: 1.4rem clamp(1.6rem, 3vw, 3.2rem);
+
+    background: var(--color-dark);
+
+    border-bottom: none;
+
+    position: relative;
+    z-index: 100;
 }
 
 .nav__list {
@@ -885,7 +886,7 @@ a {
     color: var(--color-white);
 }
 
-.nav__item > a[aria-current='page']::after {
+/* .nav__item > a[aria-current='page']::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -894,7 +895,7 @@ a {
     height: 2px;
     background: var(--color-accent);
     border-radius: 1px;
-}
+} */
 
 .nav__item a:focus-visible {
     outline: none;
@@ -903,6 +904,7 @@ a {
 }
 
 .nav__toggler {
+    cursor: pointer;
     opacity: 0.8;
     padding: 0.5rem;
     border-radius: 8px;
@@ -915,8 +917,8 @@ a {
 
 .nav.collapsible--expanded .nav__toggler {
     opacity: 1;
-    box-shadow: 0 0 0 3px #666;
-    border-radius: 5px;
+    /* box-shadow: 0 0 0 3px #666;
+    border-radius: 5px; */
 }
 
 .nav__brand {
@@ -928,6 +930,11 @@ a {
     width: 36px;
     height: 36px;
     display: block;
+    transition: transform 0.25s ease;
+}
+
+.nav__brand:hover img {
+    transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {
@@ -975,7 +982,7 @@ a {
 
 @media screen and (min-width: 768px) {
     .hero {
-        padding-top: 0;
+        padding-top: clamp(2rem, 5vw, 4rem);
     }
 
     .hero__content {
