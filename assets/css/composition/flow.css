@@ -1,0 +1,14 @@
+/* ===== FLOW ===== */
+
+/* Adds consistent spacing between direct siblings */
+.flow > * + * {
+    margin-top: var(--space-4);
+}
+
+.flow--sm > * + * {
+    margin-top: var(--space-2);
+}
+
+.flow--lg > * + * {
+    margin-top: var(--space-6);
+}

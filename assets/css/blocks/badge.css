@@ -1,0 +1,34 @@
+/* ===== BADGE ===== */
+
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+
+.badge--primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.badge--small {
+    font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}

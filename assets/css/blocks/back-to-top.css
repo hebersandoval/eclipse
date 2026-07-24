@@ -1,0 +1,44 @@
+/* ===== BACK TO TOP ===== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.3s ease-out,
+        visibility 0.3s ease-out;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+
+.back-to-top--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.back-to-top .icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-white);
+}

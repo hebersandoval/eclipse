@@ -1,0 +1,39 @@
+/* ===== UTILITIES ===== */
+
+/* Screen Reader Only - Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Link Arrow */
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+}

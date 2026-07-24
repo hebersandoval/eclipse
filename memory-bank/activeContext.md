@@ -1,39 +1,70 @@
 # Active Context
 
 ## Current Focus
-Content replacement work in progress. Hero, features, domain/CTA, plan, showcase, About, navigation, callout, footer, meta tags, and contact form complete.
+CUBE CSS refactoring — migrated from a single monolithic `styles.css` (1,483 lines) to a modular CUBE CSS architecture with 24 organized files.
 
 ## Recent Changes
-- Created memory-bank/ folder with 6 core files
-- Analyzed existing codebase structure and patterns
-- **Hero section updated**: "Your Vision, Engineered" headline, consulting-focused tagline, CTA links to /contact
-- **Contact stub created**: Minimal contact.njk page using existing design system classes (not the full custom form)
-- **Features section updated**: 3 services (Custom Web Development, Software & App Development, Ongoing Support & Maintenance), removed WordPress slot, all "Learn more" links point to /contact
-- **Domain/CTA section converted**: Simple CTA with "Ready to Start Your Project?" header, button links to /contact. Removed domain search input and price list.
-- **Plan section updated**: 3 tiers (Launch/Build/Scale) with "How We Work Together" header. Prices and support durations use NEEDS INPUT placeholders. Build tier highlighted as "Most Popular".
-- **Showcase section converted**: 4-step process overview (Discovery, Planning, Build, Launch & Support) with "From Idea to Launch" header. Icons updated to match process steps.
-- **About section created**: Converted testimonials.njk to About section. Header: "The Person Behind the Code". Bio paragraph + standalone tagline with quote icon. Photo deferred.
-- **Navigation updated**: 6 nav items (Services, Process, Pricing, About, Blog, Contact) with /#anchor links for homepage sections and /page/ links for blog/contact. Section IDs added to features, plan, showcase, and testimonials components.
-- **Callout section updated**: Heading "Let's Build Something Great", body copy "Let's discuss your project and find the right engagement for your needs.", button "Get in Touch" linking to /contact.
-- **Footer updated**: 3-column structure (Services, Company, Connect) with real links. Removed hosting-specific content (Products, Domains, Support sections). Copyright line unchanged.
-- **Meta tags updated**: Dynamic title/description via pageId and frontmatter. Added Twitter cards, canonical URL, robots tag. og:image and twitter:image use logo.svg (temporary — needs dedicated social-share image before launch). Removed duplicate og:url.
-- **Contact form built**: Real form replacing temporary stub. Uses Formspree (https://formspree.io/f/mwvgqdpp) for submission handling. Fields: Name, Email, Project Type, Budget Range, Message. Honeypot spam protection with `display:none`, `tabindex="-1"`, `aria-hidden="true"`, `autocomplete="off"`. Mailto email link kept as secondary contact method. New CSS classes: `.form`, `.form__label`, `.form__field`, `.form__footer`, `.form__honeypot`.
+
+### CUBE CSS Migration (July 24, 2026)
+- Split `assets/css/styles.css` into 24 files following CUBE CSS methodology
+- Created directory structure: `abstracts/`, `base/`, `composition/`, `blocks/`, `utilities/`, `exceptions/`
+- New `styles.css` serves as the entry point with `@import` statements in correct cascade order
+- No HTML classes renamed — zero visual changes
+- No Eleventy config changes needed
+
+### Bug Fixes Applied
+1. **`--border-radius` → `var(--radius-sm)`** — Fixed undefined CSS variable in `.input` and `.input-group` (lines 376, 398 of old CSS). Was using `var(--border-radius)` which was never defined.
+2. **`.btn--accent:hover` color** — Changed from hardcoded `#ec3000` (red-orange) to `var(--color-accent-hover)` (`#1d4ed8` blue) for brand consistency.
+
+### Dead CSS Removed
+- Removed `.block-domain` pricing grid styles (~25 lines) — the `domain.njk` template was rewritten to a simple CTA section and no longer uses those classes.
+
+### New Composition Added
+- `composition/flow.css` — `.flow` class for consistent sibling spacing (opt-in, no HTML changes needed)
+
+## File Structure
+```
+assets/css/
+├── abstracts/
+│   └── tokens.css              # Design tokens (custom properties)
+├── base/
+│   ├── reset.css                # Box-sizing reset
+│   ├── typography.css           # html/body/h1-h3/p typography
+│   └── base.css                 # Links, focus states, skip-link, reduced motion
+├── composition/
+│   ├── container.css            # .container
+│   ├── flow.css                 # .flow (new — sibling spacing)
+│   ├── grid.css                 # .grid, .grid--1x2, .grid--1x3
+│   └── media.css                # .media object
+├── blocks/
+│   ├── about.css
+│   ├── back-to-top.css
+│   ├── badge.css
+│   ├── block.css                # .block section wrapper
+│   ├── button.css
+│   ├── callout.css
+│   ├── card.css
+│   ├── collapsible.css
+│   ├── contact.css
+│   ├── features.css
+│   ├── footer.css
+│   ├── form.css                 # .input, .input-group, .form
+│   ├── hero.css
+│   ├── icon.css
+│   ├── list.css
+│   ├── nav.css
+│   ├── plan.css
+│   ├── process.css              # .block-showcase
+│   ├── quote.css
+│   └── testimonial.css
+├── utilities/
+│   └── utilities.css            # .sr-only, .link-arrow
+├── exceptions/
+│   └── exceptions.css           # .block--skewed, .callout-signup
+└── styles.css                   # Entry point with @imports
+```
 
 ## Next Steps
-- Blog posts
-
-## Active Decisions
-- Business name: "Simply Engineered" (stays as-is)
-- Target audience: Small-to-medium businesses, startups, entrepreneurs, local businesses
-- Tone: Professional but approachable
-- Contact form uses Formspree for submission handling (static site, no backend). Honeypot field uses `display:none` (not sr-only pattern) with `tabindex="-1"`, `aria-hidden="true"`, `autocomplete="off"`.
-- Features section uses 3 services (not 4) - technical consulting not a standalone offering
-- Feature images deferred (same as hero image)
-- Domain section uses simple CTA (Option 1) - no embedded form/email capture. Uses existing .block__header centering pattern.
-- Plan section uses project-based tiers (Launch/Build/Scale) with "starting at" pricing. Prices and support durations are NEEDS INPUT placeholders - not invented.
-- Showcase section uses 4-step process (not 3). Image deferred. Icons: #computer, #growth, #easy, #clock.
-- About section: Bio is plain paragraph (semantic), tagline is blockquote. Reuses existing .quote and .quote__organization classes. Photo deferred.
-- Navigation uses /#anchor format (with leading slash) so links work from any page on the site.
-- Callout heading "Let's Build Something Great" chosen to be distinct from domain section's "Ready to Start Your Project?"
-- Footer uses 3-column structure (Services, Company, Connect) with flexible CSS grid (auto-fit adapts to any number of columns)
-- og:image and twitter:image temporarily use logo.svg — should be replaced with a real dedicated social-share image (1200x630px) before launch
+- Verify visual output matches pre-refactor (compare screenshots)
+- Consider adding a build-time CSS concatenation step if HTTP request waterfall is a concern
+- The `normalize.css` file still loads separately — could be inlined into `base/reset.css` for one fewer request

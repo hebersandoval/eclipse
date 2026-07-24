@@ -1,0 +1,27 @@
+/* ===== BLOCK (Section wrapper) ===== */
+
+.block {
+    --padding-vertical: var(--space-7);
+    padding: var(--padding-vertical) var(--space-4);
+}
+
+.block__header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block--dark {
+    background: var(--color-dark);
+    color: var(--color-dark-text);
+    background-image: radial-gradient(ellipse at 20% 50%, rgba(18, 109, 228, 0.09) 0%, transparent 50%);
+}
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+    color: var(--color-white);
+}

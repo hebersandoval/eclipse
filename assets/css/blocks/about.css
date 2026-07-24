@@ -1,0 +1,35 @@
+/* ===== ABOUT ===== */
+
+.about {
+    align-items: center;
+    gap: var(--space-7);
+}
+
+.about__image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+}
+
+.about__content {
+    padding: 2rem;
+}
+
+.about__tagline {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.about__attribution {
+    color: var(--color-headings);
+    opacity: 0.4;
+    font-size: 2rem;
+    font-style: normal;
+}
+
+@media screen and (min-width: 1024px) {
+    .about__attribution {
+        font-size: 1.6rem;
+    }
+}

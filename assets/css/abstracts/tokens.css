@@ -1,0 +1,55 @@
+/* ===== DESIGN TOKENS ===== */
+
+:root {
+    /* Primary brand colors */
+    --color-primary: #126de4;
+    --color-secondary: #02cdf1;
+
+    /* Refined accent color - engineering-focused, not loud */
+    --color-accent: #2563eb;
+    --color-accent-hover: #1d4ed8;
+
+    /* Neutrals - professional, high contrast */
+    --color-headings: #0f172a;
+    --color-body: #475569;
+    --color-body-darker: #334155;
+    --color-border: #e2e8f0;
+    --color-bg-alt: #f8fafc;
+
+    /* Semantic */
+    --color-success: #10b981;
+
+    /* Dark theme */
+    --color-dark: #0a0a0f;
+    --color-dark-text: #9ca3af;
+    --color-dark-text-muted: #d2d0db;
+
+    /* Light theme */
+    --color-white: #ffffff;
+    --color-light-bg: #f3f9fa;
+    --color-placeholder: #cdcbd7;
+
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Spacing scale (8pt grid) */
+    --space-1: 0.4rem;
+    --space-2: 0.8rem;
+    --space-3: 1.2rem;
+    --space-4: 1.6rem;
+    --space-5: 2.4rem;
+    --space-6: 3.2rem;
+    --space-7: 4.8rem;
+    --space-8: 6.4rem;
+
+    /* Border radius - subtle, not playful */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    /* Shadows - layered elevation */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

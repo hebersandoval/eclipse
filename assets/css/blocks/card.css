@@ -1,0 +1,38 @@
+/* ===== CARD ===== */
+
+.card {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition:
+        box-shadow 0.2s ease-out,
+        transform 0.2s ease-out;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.card__header,
+.card__body {
+    padding: var(--space-6);
+}
+
+.card--primary .card__header {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.card--secondary .card__header {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
+.card--secondary .badge--secondary {
+    background: #02cdf1;
+}
