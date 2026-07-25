@@ -49,6 +49,8 @@ Live, deployed at www.simplyenginee.red
 - [x] Spam-resistant phone reveal: progressive enhancement with split string fragments, keyboard accessible
 - [x] Footer mobile modernization: reduced padding, removed uppercase headings, tighter spacing
 - [x] Removed redundant `domain.njk` CTA section from homepage (Option 1: remove entirely)
+- [x] Mobile button modernization: reduced size from ~86px to ~48px, removed pill shape, sentence case
+- [x] Pricing section redesign: replaced fixed-price tiers with engagement types (Fixed-Price, Hourly, Retainer)
 
 ## Next Milestones
 - Elevation improvements (design polish, typography, spacing rhythm)

@@ -7,62 +7,25 @@
 .plan__name {
     color: var(--color-white);
     margin: 0;
-    font-weight: 500;
-    font-size: 2.4rem;
-}
-
-.plan__price-label {
+    font-weight: 600;
     font-size: 2rem;
-    font-weight: 300;
-    display: block;
-    opacity: 0.8;
-}
-
-.plan__price {
-    font-size: 6rem;
-}
-
-.plan__billing-cycle {
-    font-size: 2.4rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-right: 1rem;
+    margin-bottom: var(--space-3);
 }
 
 .plan__description {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-white);
+    opacity: 0.85;
 }
 
 .plan .list__item {
-    margin-bottom: 2rem;
-}
-
-.plan--popular {
-    transform: scale(1.05);
-}
-
-.plan--popular .card__header {
-    position: relative;
-}
-
-.plan--popular .card__header::before {
-    content: url(/assets/images/popular.svg);
-    width: 40px;
-    display: inline-block;
-    position: absolute;
-    top: -6px;
-    right: 5%;
+    margin-bottom: 1.5rem;
 }
 
 .plan:hover {
     transform: translateY(-4px);
-}
-
-.plan--popular:hover {
-    transform: scale(1.05) translateY(-4px);
 }
 
 /* Plans Block - Header Spacing */
@@ -72,27 +35,19 @@
 
 /* Plans Block - Grid Gap */
 .block-plans .grid {
-    gap: var(--space-7) var(--space-4);
+    gap: var(--space-6);
 }
 
 @media screen and (min-width: 1024px) {
     .plan__name {
-        font-size: 1.4rem;
-    }
-
-    .plan__price-label {
-        font-size: 1.6rem;
-    }
-
-    .plan__price {
-        font-size: 5rem;
-    }
-
-    .plan__billing-cycle {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .plan__description {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+
+    .block-plans .grid {
+        gap: var(--space-7);
     }
 }
