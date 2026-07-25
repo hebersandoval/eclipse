@@ -155,6 +155,77 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Phone Reveal */
+.phone-reveal {
+    display: contents;
+}
+
+.phone-reveal__label {
+    display: inline;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-body-darker);
+    margin-right: 0.5rem;
+}
+
+.phone-reveal__masked {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-headings);
+    letter-spacing: 0.02em;
+    transition: opacity 0.25s ease-out;
+}
+
+.phone-reveal__full {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.phone-reveal__full:not([hidden]) {
+    display: inline;
+    opacity: 1;
+}
+
+.phone-reveal__link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease-out;
+}
+
+.phone-reveal__link:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+.phone-reveal__btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    text-transform: none;
+    font-weight: 500;
+    border-width: 1.5px;
+    vertical-align: baseline;
+    transition:
+        opacity 0.25s ease-out,
+        background 0.2s ease-out,
+        color 0.2s ease-out;
+}
+
+.phone-reveal__btn[hidden] {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .phone-reveal__masked,
+    .phone-reveal__full {
+        transition: none;
+    }
+}
+
 /* Contact Process */
 .contact__process {
     margin-top: var(--space-7);

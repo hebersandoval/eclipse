@@ -1,3 +1,63 @@
+// Phone number reveal — spam-resistant progressive enhancement
+const phoneRevealModule = (() => {
+    const PHONE_DIGITS = ['908', '517', '4393'];
+    const PHONE_LABEL = '+1';
+    const formatPhone = (area, prefix, line) => `(${area}) ${prefix}-${line}`;
+    const FULL_NUMBER = formatPhone(...PHONE_DIGITS);
+    const TEL_HREF = `tel:${PHONE_LABEL}${PHONE_DIGITS.join('')}`;
+
+    const init = () => {
+        const container = document.querySelector('.phone-reveal');
+        if (!container) return;
+
+        const btn = container.querySelector('.phone-reveal__btn');
+        const masked = container.querySelector('.phone-reveal__masked');
+        const full = container.querySelector('.phone-reveal__full');
+        const link = container.querySelector('.phone-reveal__link');
+
+        if (!btn || !masked || !full || !link) return;
+
+        const reveal = () => {
+            btn.setAttribute('hidden', '');
+            // Fade out masked text, then remove from layout
+            masked.style.opacity = '0';
+            setTimeout(() => {
+                masked.style.display = 'none';
+            }, 250);
+            masked.setAttribute('aria-hidden', 'true');
+            // Populate and reveal full number
+            link.textContent = FULL_NUMBER;
+            link.href = TEL_HREF;
+            full.removeAttribute('hidden');
+            // Fade in the full number
+            requestAnimationFrame(() => {
+                full.style.opacity = '1';
+            });
+            // Update container label for screen readers
+            container.setAttribute('aria-label', `Phone number: ${FULL_NUMBER}`);
+            // Remove event listeners after first reveal
+            btn.removeEventListener('click', reveal);
+            btn.removeEventListener('keydown', handleKeydown);
+        };
+
+        const handleKeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                reveal();
+            }
+        };
+
+        btn.addEventListener('click', reveal);
+        btn.addEventListener('keydown', handleKeydown);
+    };
+
+    return { init };
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+    phoneRevealModule.init();
+});
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
