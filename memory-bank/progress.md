@@ -44,6 +44,12 @@ Live, deployed at www.simplyenginee.red
 - [x] Hero image: added `max-width: 100%` to `.hero__image` in `blocks/hero.css`
 - [x] Stretched buttons: reduced horizontal padding on narrow screens (≤480px) in `blocks/button.css`
 
+## Recent Changes (Jul 25, 2026)
+- [x] Contact page mobile redesign: modernized form with recessed inputs, refined labels, cleaner button
+- [x] Spam-resistant phone reveal: progressive enhancement with split string fragments, keyboard accessible
+- [x] Footer mobile modernization: reduced padding, removed uppercase headings, tighter spacing
+- [x] Removed redundant `domain.njk` CTA section from homepage (Option 1: remove entirely)
+
 ## Next Milestones
 - Elevation improvements (design polish, typography, spacing rhythm)
 - Content refinement (replace remaining placeholder copy)
