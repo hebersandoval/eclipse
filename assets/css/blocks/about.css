@@ -7,6 +7,9 @@
 
 .about__image img {
     width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
     border-radius: var(--radius-lg);
 }
 
@@ -14,23 +17,32 @@
     padding: 2rem;
 }
 
+.about__content > p:first-of-type {
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
 .about__tagline {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 1.5rem;
-    margin: 3rem 0;
+    gap: 1rem;
+    margin: 2.5rem 0;
 }
 
 .about__attribution {
     color: var(--color-headings);
     opacity: 0.4;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: normal;
 }
 
 @media screen and (min-width: 1024px) {
+    .about__image img {
+        max-width: 320px;
+    }
+
     .about__attribution {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }

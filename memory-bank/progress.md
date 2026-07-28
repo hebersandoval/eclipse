@@ -52,6 +52,10 @@ Live, deployed at www.simplyenginee.red
 - [x] Mobile button modernization: reduced size from ~86px to ~48px, removed pill shape, sentence case
 - [x] Pricing section redesign: replaced fixed-price tiers with engagement types (Fixed-Price, Hourly, Retainer)
 
+## Recent Changes (Jul 27, 2026)
+- [x] About/testimonial section refinement: constrained image max-width, improved typography hierarchy
+- [x] Quote sizing: reduced mobile quote from 3rem to 2rem, desktop from 2rem to 1.8rem
+
 ## Next Milestones
 - Elevation improvements (design polish, typography, spacing rhythm)
 - Content refinement (replace remaining placeholder copy)
