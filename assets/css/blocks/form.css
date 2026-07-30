@@ -6,7 +6,7 @@
     color: var(--color-headings);
     font-size: 2rem;
     outline: 0;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2rem;
     transition:
         border-color 0.2s ease-out,
         box-shadow 0.2s ease-out;
@@ -63,7 +63,7 @@
     color: var(--color-headings);
     font-size: 2rem;
     outline: 0;
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2rem;
     transition:
         border-color 0.2s ease-out,
         box-shadow 0.2s ease-out;

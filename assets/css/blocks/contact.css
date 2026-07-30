@@ -155,17 +155,77 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Contact Card */
+.contact-card {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contact-card__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: var(--space-4) 0;
+}
+
+.contact-card__item:first-child {
+    padding-top: 0;
+}
+
+.contact-card__item:last-child {
+    padding-bottom: 0;
+}
+
+.contact-card__label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-body-darker);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-card__value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-headings);
+    text-decoration: none;
+    line-height: 1.3;
+    transition: color 0.2s ease-out;
+}
+
+.contact-card__value:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.contact-card__divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 0;
+}
+
 /* Phone Reveal */
 .phone-reveal {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
 }
 
 .phone-reveal__label {
-    display: inline;
+    /* display: inline;
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-body-darker);
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; */
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-body-darker);
 }
 
 .phone-reveal__masked {
@@ -177,23 +237,28 @@
 }
 
 .phone-reveal__full {
-    display: none;
+    display: inline;
     opacity: 0;
     transition: opacity 0.25s ease-out;
 }
 
 .phone-reveal__full:not([hidden]) {
-    display: inline;
     opacity: 1;
 }
 
 .phone-reveal__link {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem;
     font-weight: 600;
     color: var(--color-accent);
     text-decoration: none;
     letter-spacing: 0.02em;
-    transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; */
+    display: block;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+    line-height: 1.2;
 }
 
 .phone-reveal__link:hover {
@@ -213,10 +278,13 @@
         opacity 0.25s ease-out,
         background 0.2s ease-out,
         color 0.2s ease-out;
+    align-self: flex-start;
+
+    margin-top: .25rem;
 }
 
 .phone-reveal__btn[hidden] {
-    display: none;
+    visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -316,7 +384,7 @@
 
     .form--contact .input {
         font-size: 1.5rem;
-        padding: 1.5rem 3.5rem;
+        padding: 1.5rem 2rem;
     }
 
     .form--contact .btn {

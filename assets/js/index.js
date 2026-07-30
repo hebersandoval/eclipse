@@ -18,11 +18,12 @@ const phoneRevealModule = (() => {
         if (!btn || !masked || !full || !link) return;
 
         const reveal = () => {
-            btn.setAttribute('hidden', '');
-            // Fade out masked text, then remove from layout
+            // Hide button but keep it in layout to prevent shift
+            btn.style.visibility = 'hidden';
+            // Fade out masked text, then hide (visibility preserves layout space)
             masked.style.opacity = '0';
             setTimeout(() => {
-                masked.style.display = 'none';
+                masked.style.visibility = 'hidden';
             }, 250);
             masked.setAttribute('aria-hidden', 'true');
             // Populate and reveal full number

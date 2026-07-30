@@ -22,6 +22,12 @@ CUBE CSS refactoring — migrated from a single monolithic `styles.css` (1,483 l
 ### New Composition Added
 - `composition/flow.css` — `.flow` class for consistent sibling spacing (opt-in, no HTML changes needed)
 
+### Contact Card Redesign (July 30, 2026)
+- Replaced inline phone reveal widget with a structured `.contact-card` component
+- Added vertical card layout with label/value pairs, thin divider, and consistent spacing
+- Improved premium feel with subtle background, restrained typography, and calm interaction
+- Maintained progressive enhancement, accessibility, and zero layout shifts during phone reveal
+
 ## File Structure
 ```
 assets/css/
