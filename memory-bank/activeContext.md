@@ -33,7 +33,7 @@ CUBE CSS refactoring — migrated from a single monolithic `styles.css` (1,483 l
 - Added CSS-only floating animation and subtle gradient shift background
 - Included three navigation actions: Return Home, View Services, Contact Us
 - Created new `blocks/error.css` with animations that respect `prefers-reduced-motion`
-- GitHub Pages automatically serves `404/index.html` for missing pages
+- **Fixed permalink** from `/contact/index.html` to `/404/index.html` so GitHub Pages serves it correctly
 
 ## File Structure
 ```
