@@ -38,6 +38,7 @@
 @import 'blocks/back-to-top.css';
 @import 'blocks/form.css';
 @import 'blocks/contact.css';
+@import 'blocks/error.css';
 
 /* 5. UTILITIES — trump specificity */
 @import 'utilities/utilities.css';
